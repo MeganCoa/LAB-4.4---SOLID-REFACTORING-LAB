@@ -1,7 +1,6 @@
 import java.util.ArrayList;
-import java.util.List;
 
-public class VHS extends Movie implements Play {
+public class VHS extends Movie {
 	private double currentTime = 0;
 	
 	public double getCurrentTime() {
@@ -17,8 +16,8 @@ public class VHS extends Movie implements Play {
 		currentTime = 0;
 	}
 	
-	
-	public void play(List<String> Scenes) {
+	@Override
+	public void play() {
 		if(currentTime > getScenes().size() - 1) {
 			rewind();
 		}

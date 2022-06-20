@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Movie {
+public abstract class Movie {
 	private String title;
 	private double runTime;
 	private ArrayList<String> scenes;
@@ -45,8 +45,5 @@ public class Movie {
 			System.out.println("Scene: [" + scenes.indexOf(scene) + "] " + scene);
 		}
 	}
-	public void play() {
-		this.play();
-	}
-
+	public abstract void play();
 }

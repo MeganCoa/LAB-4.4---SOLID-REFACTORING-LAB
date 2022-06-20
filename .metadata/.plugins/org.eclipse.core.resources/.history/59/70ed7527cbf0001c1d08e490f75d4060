@@ -1,14 +1,13 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-public class DVD extends Movie implements Play {
+public class DVD extends Movie {
 	
 	public DVD(String title, double runTime, ArrayList<String> scenes) {
 		super(title, runTime, scenes);
 	}
-	
-	public void play(List<String> Scenes) {
+	@Override
+	public void play() {
 		Scanner scrn = new Scanner(System.in);
 		
 			System.out.println("Which scene of the DVD " + this.getTitle() + "\n");
